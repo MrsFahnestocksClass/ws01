@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+  
+  <!-- textbox object  -->
+  <div style=" 
+		padding-top: 50px;
+		padding-right: 30px;
+		padding-bottom: 50px;
+		padding-left: 80px;
+        font: bold 60px Comic Sans MS, cursive, sans-serif;">
+  
+    	<!-- question object  -->
+       		<label >2+3=</label>
+    		<input type="text" maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);"
+                   style=
+                   "width: 60px; 
+                    height: 60px;
+                    position: relative;
+                    left:-10px;
+                    border: 3px solid  #B8BBCC;
+                    border-radius: 7px;
+                    font: bold 60px Comic Sans MS, cursive, sans-serif;
+                    ">
+ </div>
+ </div>
+  
+	  <!-- textbox object  -->
+	  <div style=" 
+			padding-top: 50px;
+			padding-right: 30px;
+			padding-bottom: 50px;
+			padding-left: 80px;
+			font: bold 60px Comic Sans MS, cursive, sans-serif;">
+	  
+			<!-- question object  -->
+				<label >5-4=</label>
+				<input type="text" maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);"
+					   style=
+					   "width: 60px; 
+						height: 60px;
+						position: relative;
+						left:-10px;
+						border: 3px solid  #B8BBCC;
+						border-radius: 7px;
+						font: bold 60px Comic Sans MS, cursive, sans-serif;
+						">
+	 </div>
+ </div>
+
+  <button type="button" onclick="myFunction()">Check Answer</button>
+  
+ 
+ <script>
+  function myFunction(){
+  
+		var ans = [5, 1, "how"];
+          // GET ALL THE INPUT ELEMENTS.
+        var ele = document.getElementsByTagName('input');
+		var elNum=0;
+        // LOOP THROUGH EACH ELEMENT.
+        for (i = 0; i < ele.length; i++) {
+
+            // CHECK THE ELEMENT TYPE.
+            if (ele[i].type == 'number' || ele[i].type == 'text') {
+                
+                if(ele[i].value==ans[elNum]){
+					ele[i].style.backgroundColor="hsl(120, 100%, 75%)";
+				}
+				else{
+					ele[i].style.backgroundColor="hsla(2, 79%, 59%, 0.72)";
+				}
+				elNum++;
+            }
+        }
+ 
+
+	
+  }
+  
+  function reset(element){
+	if (element.type == 'number' || element.type == 'text') {
+		element.style.backgroundColor="initial";
+	}
+  }
+  
+  function isNumber(e){
+    e = e || window.event;
+    var charCode = e.which ? e.which : e.keyCode;
+    return /\d/.test(String.fromCharCode(charCode));
+}
+  </script>
+
+  </body>
+  

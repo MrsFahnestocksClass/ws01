@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+	<style>
+	
+/*=========HEADER==========*/
+.header {
+  left:0px;
+  width: 100%;
+  top:0px;
+  background: #555;
+  color: #f1f1f1;
+  z-index: 50;
+  height:39px;
+  box-shadow: 6px 6px  5px grey;
+  position: fixed;
+  border-bottom-left-radius: 20pt 5pt;
+   border-bottom-right-radius: 5pt 20pt;
+   text-align:center;
+   line-height: 0px;
+}
+
+
+
+img#img-1{
+	position: relative;
+	width:50px;
+	height:50px;
+	display: inline-block;
+	padding-right: 10%;
+
+}
+
+div#dragHolder{
+		border: 3px solid green;
+		background-color: green;
+		display: inline-block;
+		height: 200px;
+		width: 30%;
+		
+}
+
+div#div-2{
+		position:relative;
+}
+
+div.drag{
+	position: absolute;
+	
+	
+}
+
+
+
+
+img#mydivheader{
+    width:50px;
+    height:50px;
+    cursor: move;
+     position:relative;
+     left:0px ;
+	 bottom:0px;
+}
+
+.cell{
+	background-color: lightblue;
+    
+		border-style: solid;
+    
+		border-color: black;
+    
+		border-width: 5px;
+		
+		padding-top: 50px;
+	    padding-right: 50px;
+	    padding-bottom: 50px;
+	    padding-left: 50px; 
+}
+
+.grid-container {
+  padding-top:44px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". ." ". ." ". .";
+}
+
+.button:active {
+  
+  transform: translateY(4px);
+}
+
+
+.question-label{
+	font: bold 80px Comic Sans MS, cursive, sans-serif;
+}
+
+.question-box{
+	
+	 width: 80px ;
+     
+                    height: 80px;
+    
+					
+                    position: relative;
+    
+                    left:-10px;
+    
+                    border: 3px solid  #B8BBCC;
+    
+                    border-radius: 7px;
+    
+                    font: bold 80px Comic Sans MS, cursive, sans-serif;
+}
+button#check-1{
+		font: bold 20px Comic Sans MS, cursive, sans-serif;
+		height: 80px;
+		width:160px;
+		border-radius: 5px;
+		border: 5px solid grey;
+		background: rgb(205,205,207);
+		background: linear-gradient(180deg, rgba(205,205,207,1) 0%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 100%);
+		
+			
+}
+</style>
+</head>
+<body>
+	
+	<!--Header-->
+	<div class="header" id="myHeader">
+		<h2 >My Header</h2>
+	</div>
+	
+	
+	<div  class="grid-container">
+
+		<!-- textbox object  -->
+		<div id="div-1" class="cell">
+			<img src="x.png"><br>
+			<!-- question object  -->
+			 <label class="question-label">2+3=</label> 
+			 <input id="question-1" class="question-box" data-ans='["5"]' maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);" type="text" >
+			 <button id="check-1" class="button" data-linked='["question-1"]' onclick="myFunction(this)" type="button"  >Check Answers</button>
+		</div>
+		
+		
+		<!-- textbox object  -->
+		<div id="div-2" class="cell" >
+			<img id="img-1" src="https://lh3.googleusercontent.com/proxy/D-KLZSwy9rVXQMlEaTfsVTwmtHU3WGZqboFuu4Uim_uyCKhIIq9bHNsom6QVJvBH09WvpXNBq79VJy3c0_6HgRr1hlAQ2EI" >
+			
+			<br>
+			<!-- question object  -->
+			 <label class="question-label">5-4=</label> 
+			 <input id="question-2" class="question-box" data-ans='["1"]' maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);" type="text" >
+		</div>
+		
+		
+		<!-- textbox object  -->
+		<div id="div-4" class="cell">
+			<img src="x.png"><br>
+			<!-- question object  -->
+			 <label class="question-label">9-3=</label> 
+			 <input id="question-3" class="question-box" data-ans='["6"]' maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);" type="text" >
+		</div>
+		
+	</div>
+	<div id="div-3">
+		
+	</div>
+	
+	
+	<script>
+	function myFunction(e){
+  
+		
+		
+		
+		
+			
+          // Get list of linked text objects
+		 var idList=JSON.parse(e.dataset.linked); 
+		
+	
+        // LOOP THROUGH EACH ELEMENT.
+        for (i = 0; i < idList.length; i++) {
+			
+			var ele=document.getElementById(idList[i]);
+			var ans=JSON.parse(ele.dataset.ans);
+			
+            // CHECK THE ELEMENT TYPE.
+            if (ele.type == 'number' || ele.type == 'text') {
+                for(n=0; n<ans.length;n++){
+					
+					if(ele.value==ans[n]){
+						ele.style.backgroundColor="hsl(120, 100%, 75%)";
+						break;
+					}
+					else{
+						ele.style.backgroundColor="hsla(2, 79%, 59%, 0.72)";
+					}
+				}
+				
+            }
+        }
+ 
+
+	
+  }
+  
+  function reset(element){
+	if (element.type == 'number' || element.type == 'text') {
+		element.style.backgroundColor="white";
+	}
+  }
+  
+  function isNumber(e){
+    e = e || window.event;
+    var charCode = e.which ? e.which : e.keyCode;
+    return /\d/.test(String.fromCharCode(charCode));
+}
+parent.document.getElementsByTagName('iframe')[0].scrolling="no";
+</script>
+
+</body>
+</html>
