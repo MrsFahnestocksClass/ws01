@@ -20,7 +20,8 @@ function myFunction(e){
                 for(n=0; n<ans.length;n++){
 					
 					if(ele.value==ans[n]){
-						ele.style.backgroundColor="hsl(120, 100%, 75%)";
+						
+						ele.style.backgroundColor="hsl(120, 100%, 50%)";
 						break;
 					}
 					else{
