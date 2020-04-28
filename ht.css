@@ -1,6 +1,6 @@
 
 /*=========HEADER==========*/
-.header {
+.banner {
   left:0px;
   width: 100%;
   top:0px;
@@ -31,7 +31,10 @@
   
 }
 
-
+.header{
+	display:inline-block;
+	position:relative;
+}
 
 .subContainer{
 	position:relative;
@@ -51,24 +54,40 @@ img#img-1{
 
 }
 
+.directions-head{
+	font: 30px bold Comic Sans MS, cursive, sans-serif;
+}
+.directions{
+	padding-top:8%;
+	
+	padding-bottom:40px;
+	padding-left:5%;
+	position: relative;
+	font: 20px Comic Sans MS, cursive, sans-serif;
+	display:block;
+	
+
+}
 
 .name-label{
-	
+	position: relative;
 	font:  90px Comic Sans MS, cursive, sans-serif;
-	position:inline-block;
+	display:inline-block;
+	
 }
 
 .name-input{
-	width: 30%;
+	position: relative;
+	width: 60%;
 	height: 60px;
 	margin-top:90px;
 	font:40px Comic Sans MS, cursive, sans-serif;
-	position:inline-block;
+	display:inline-block;
 	border-bottom: 5px solid black;
 	border-top:0px;
 	border-right:0px;
 	border-left:0px;
-	
+
 }
 
 div#div-2{
@@ -111,7 +130,7 @@ div#div-2{
 .audioButton{
 	width:60px;
 	height:60px;
-	
+	margin-top:20px;
 }
 
 .button:active {

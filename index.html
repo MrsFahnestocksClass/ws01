@@ -8,21 +8,42 @@
 </head>
 <body>
 	
-	<!--Header-->
-	<div class="header" id="myHeader">
+	<!--banner-->
+	<div class="banner" id="myHeader">
 		<h2 >Worksheet One</h2>
 	</div>
 	
-	<div class="idk">
-		<label class="name-label">Name:</label>
-		<input type="text" class="name-input">
+	<div class="header">
+	
+			<label class="name-label">Name:</label>
+			<input type="text" class="name-input">
+			<div class="directions">
+				<label class="directions-head">Directions:</label>
+				<br>
+				<label>Solve these equations.
+				   Click on an apple to take it away.
+				   <br>
+				   Type your answer in the answer box.
+				   <br>
+				   To check your answer click on the check mark.
+				   <br>
+				   If the box turns green, you are right. 
+				   <br>
+				   If the box turns red, try again.
+				</label>
+				
+				<div>
+					<button  type="button" class="audioButton" >
+						<img class="icon" src="speaker.png">
+					</button>
+				</div>
+	
+			</div>
+		
 	</div>
 	
-	<div>
-		 <button  type="button" class="audioButton" >
-			<img class="icon" src="speaker.png">
-		</button>
-	</div>
+	
+	
 	
 	<div  class="grid-container">
 
@@ -113,12 +134,206 @@
 		
 	
 		
-	</div>
-	<div id="div-3">
+	
+	
+	<!-- textbox object  -->
+		<div id="div-2" class="cell" >
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png">
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			<br>
+			<!-- question object  -->
+			 <label class="question-label">6-3=</label> 
+			 <input id="question-3" class="question-box" data-ans='["3"]' maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);" type="text" >
+			 <button id="check-1" class="button" data-linked='["question-3"]' onclick="myFunction(this)" type="button"  >
+				<img class="icon" src="chek.png">
+				</button>
+		</div>
+	
+		<!-- textbox object  -->
+		<div id="div-2" class="cell" >
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png">
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			
+			<br>
+			<!-- question object  -->
+			 <label class="question-label">4-2=</label> 
+			 <input id="question-4" class="question-box" data-ans='["2"]' maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);" type="text" >
+			 <button id="check-1" class="button" data-linked='["question-4"]' onclick="myFunction(this)" type="button"  >
+				<img class="icon" src="chek.png">
+				</button>
+		</div>
 		
+		<!-- textbox object 5 -->
+		<div id="div-2" class="cell" >
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png">
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			
+			<br>
+			<!-- question object  -->
+			 <label class="question-label">4-3=</label> 
+			 <input id="question-5" class="question-box" data-ans='["1"]' maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);" type="text" >
+			 <button id="check-1" class="button" data-linked='["question-5"]' onclick="myFunction(this)" type="button"  >
+				<img class="icon" src="chek.png">
+				</button>
+		</div>
+		
+		
+		<!-- textbox object 6 -->
+		<div id="div-2" class="cell" >
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png">
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			<div class="subContainer" >
+				<img id="img-1" src="apple.png">
+					<div class="overlay" onclick="toggleX(this)">
+						<img id="img-1" src="x.png" >
+					</div>
+				
+			</div>
+			
+			<br>
+			<!-- question object  -->
+			 <label class="question-label">5-5=</label> 
+			 <input id="question-6" class="question-box" data-ans='["0"]' maxlength="1" oninput="reset(this)" onkeypress="return isNumber(event);" type="text" >
+			 <button id="check-1" class="button" data-linked='["question-6"]' onclick="myFunction(this)" type="button"  >
+				<img class="icon" src="chek.png">
+				</button>
+		</div>
+	
+	
 	</div>
-	
-	
 	<script src="ht.js"></script>
 </body>
 </html>
