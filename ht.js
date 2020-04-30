@@ -36,12 +36,14 @@ function myFunction(e){
 	
   }
   
-  function reset(element){
+
+  
+  function cclear(element){
+
 	if (element.type == 'number' || element.type == 'text') {
 		element.style.backgroundColor="white";
 	}
   }
-  
   function isNumber(e){
     e = e || window.event;
     var charCode = e.which ? e.which : e.keyCode;
@@ -57,7 +59,7 @@ function toggleX(elmnt){
 		}
 }
 	
-parent.document.getElementsByTagName('iframe')[0].scrolling="no";
+
 /*
 // Make the DIV element draggable:
 
