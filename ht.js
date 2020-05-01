@@ -95,7 +95,10 @@ function toggleX(elmnt){
 	formData.append('number of questions',total);
 	formData.append('correct',correct);
 	
-    fetch(scriptURL, { method: 'POST', body:formData})
+    fetch(scriptURL, { method: 'POST', body:formData,mode: 'no-cors'})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+	fetch(scriptURL, { method: 'POST', body:formData})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
   })
