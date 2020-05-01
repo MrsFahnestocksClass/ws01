@@ -12,11 +12,11 @@
 	<div class="banner" id="myHeader">
 		<h2 >Worksheet One</h2>
 	</div>
-<form action="/results.php" autocomplete="off">
+<form name="sheetPost" autocomplete="off" >
 	<div class="header">
 	
 			<label class="name-label">Name:</label>
-			<input type="text" class="name-input">
+			<input name="studentname" type="text" class="name-input">
 			<div class="directions">
 				<label class="directions-head">Directions:</label>
 				<br>
@@ -86,8 +86,8 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">5-2=</label> 
-			 <input id="question-1" class="question-box" data-ans='["3"]' maxlength="1" onfocus="reset(this);cclear(this)" onkeypress="return isNumber(event);" type="text" >
-			 <button id="check-1" class="button" data-linked='["question-1"]' onclick="myFunction(this)" type="button"  >
+			 <input id="question-1"  class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)" onkeypress="return isNumber(event);" type="text" >
+			 <button  class="check-1" data-linked='["question-1"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -121,8 +121,8 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">3-2=</label> 
-			 <input id="question-2" class="question-box" data-ans='["1"]' maxlength="1" onfocus="reset(this);cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button id="check-1" class="button" data-linked='["question-2"]' onclick="myFunction(this)" type="button"  >
+			 <input id="question-2" class="question-box" data-ans='["1"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <button class="check-1" data-linked='["question-2"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -182,8 +182,8 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">6-3=</label> 
-			 <input id="question-3" class="question-box" data-ans='["3"]' maxlength="1" onfocus="reset(this);cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button id="check-1" class="button" data-linked='["question-3"]' onclick="myFunction(this)" type="button"  >
+			 <input id="question-3" class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <button class="check-1" data-linked='["question-3"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -226,8 +226,8 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">4-2=</label> 
-			 <input id="question-4" class="question-box" data-ans='["2"]' maxlength="1" onfocus="reset(this);cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button id="check-1" class="button" data-linked='["question-4"]' onclick="myFunction(this)" type="button"  >
+			 <input id="question-4" class="question-box" data-ans='["2"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <button class="check-1" data-linked='["question-4"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -270,8 +270,8 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">4-3=</label> 
-			 <input id="question-5" class="question-box" data-ans='["1"]' maxlength="1" onfocus="reset(this);cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button id="check-1" class="button" data-linked='["question-5"]' onclick="myFunction(this)" type="button"  >
+			 <input id="question-5" class="question-box" data-ans='["1"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <button class="check-1" data-linked='["question-5"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -322,17 +322,17 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">5-5=</label> 
-			 <input id="question-6" class="question-box" data-ans='["0"]' maxlength="1" onfocus="reset(this);cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button id="check-1" class="button" data-linked='["question-6"]' onclick="myFunction(this)" type="button"  >
+			 <input id="question-6" class="question-box" data-ans='["0"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <button class="check-1" data-linked='["question-6"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
 	
-	<input type="submit" value="Submit">
+	
 	</div>
 	
 	<script src="ht.js"></script>
-
+	<input type="submit" value="Submit">
 	</form>
 </body>
 </html>
