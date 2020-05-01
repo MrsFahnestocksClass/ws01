@@ -1,5 +1,16 @@
 
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwe13vW6iwlPrRB7pX_JjOceCdZ3CVFeLQf0pq91gDx8hQbRwo/exec'
+const total=6;
+const pageName="worksheet 1";
+  
+  
+const form = document.forms['sheetPost']
+
+
 var incorrectAttemps=0;
+var correct=0;
 
 
 function myFunction(e){
@@ -25,6 +36,7 @@ function myFunction(e){
 						e.style.color="#cccccc";
 						console.log(e.disabled);
 						ele.dataset.flag=true;
+						correct++;
 						ele.style.backgroundColor="hsl(120, 100%, 50%)";
 						break;
 					}
@@ -71,13 +83,16 @@ function toggleX(elmnt){
 }
 	
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwe13vW6iwlPrRB7pX_JjOceCdZ3CVFeLQf0pq91gDx8hQbRwo/exec'
-  const form = document.forms['sheetPost']
 
   form.addEventListener('submit', e => {
     e.preventDefault()
 	var formData=new FormData(form);
+	
 	formData.append('incorrectAttemps',incorrectAttemps);
+	formData.append('page',pageName);
+	formData.append('number of questions',total);
+	formData.append('correct',correct);
+	
     fetch(scriptURL, { method: 'POST', body:formData })
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
