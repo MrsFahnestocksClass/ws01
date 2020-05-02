@@ -1,8 +1,8 @@
 
 
-
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwe13vW6iwlPrRB7pX_JjOceCdZ3CVFeLQf0pq91gDx8hQbRwo/exec'
-const sheetURL='https://docs.google.com/spreadsheets/d/1Qpn0WkSZwyFpaMN6fnkNj3gY-aniWBTqUDNPmy10LOU/edit#gid=0'
+
+const sheetURL='https://docs.google.com/spreadsheets/d/1rmjSwqARW-6DW2igFVqv9lKKYNUB6C-uzpH3TiJSzm4/edit#gid=0'
 const total=6;
 const pageName="worksheet 1";
   
@@ -95,10 +95,7 @@ function toggleX(elmnt){
 	formData.append('number of questions',total);
 	formData.append('correct',correct);
 	
-    fetch(scriptURL, { method: 'POST', body:formData,mode: 'no-cors'})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-	fetch(scriptURL, { method: 'POST', body:formData})
+    fetch(scriptURL, { method: 'POST', body:formData })
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
   })
