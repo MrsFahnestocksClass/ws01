@@ -103,5 +103,5 @@ function toggleX(elmnt){
 
 //Disable autocomplete finaly (stupid google)
 //================================================
-$('input').attr('autocomplete','off');
 
+$('#sheetPost').disableAutoFill();
