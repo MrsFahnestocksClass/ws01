@@ -13,12 +13,12 @@
 	<div class="banner" id="myHeader">
 		<h2 >Worksheet One</h2>
 	</div>
-<form name="sheetPost"   autocomplete="off" >
+<form name="sheetPost"   autocomplete='disabled' >
 <input type="password" style="display:none;" readonly>
 	<div class="header">
 	
 			<label class="name-label">Name:</label>
-			<input name="studentname"  autocomplete="my-field-name" type="text" class="name-input">
+			<input name="studentname"  autocomplete="disabled" type="text" class="name-input">
 			<div class="directions">
 				<label class="directions-head">Directions:</label>
 				<br>
@@ -88,7 +88,7 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">5-2=</label> 
-			 <input id="question-1"  autocomplete="my-field-name"  class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)" onkeypress="return isNumber(event);" type="text" >
+			 <input id="question-1"  autocomplete="disabled"  class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)" onkeypress="return isNumber(event);" type="text" >
 			 <button  class="check-1" data-linked='["question-1"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
@@ -184,7 +184,7 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">6-3=</label> 
-			 <input id="question-3"  autocomplete="my-field-name"class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <input id="question-3"  autocomplete="disabled"class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
 			 <button class="check-1" data-linked='["question-3"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
@@ -228,7 +228,7 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">4-2=</label> 
-			 <input   autocomplete="my-field-name" id="question-4" class="question-box" data-ans='["2"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <input   autocomplete="disabled" id="question-4" class="question-box" data-ans='["2"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
 			 <button class="check-1" data-linked='["question-4"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
@@ -272,7 +272,7 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">4-3=</label> 
-			 <input id="question-5"  autocomplete="my-field-name" class="question-box" data-ans='["1"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <input id="question-5"  autocomplete="disabled" class="question-box" data-ans='["1"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
 			 <button class="check-1" data-linked='["question-5"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
@@ -324,7 +324,7 @@
 			<br>
 			<!-- question object  -->
 			 <label class="question-label">5-5=</label> 
-			 <input id="question-6"  autocomplete="my-field-name" class="question-box" data-ans='["0"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
+			 <input id="question-6"  autocomplete="disabled" class="question-box" data-ans='["0"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
 			 <button class="check-1" data-linked='["question-6"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
@@ -334,7 +334,7 @@
 	</div>
 	
 	<script src="ht.js"></script>
-	<input type="submit" value="Submit">
+	<input type="submit" value="Submit" class="subButton">
 	</form>
 </body>
 </html>

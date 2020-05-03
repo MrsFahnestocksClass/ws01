@@ -176,3 +176,14 @@ div#div-2{
 		cursor: pointer;
 			
 }
+
+.subButton{
+		position: relative;
+		width: 10%;
+		margin-left: 45%;
+		margin-top:2%;
+		margin-bottom:2%;
+		cursor: pointer;
+		height:50px;
+		font: bold 20px Comic Sans MS, cursive, sans-serif;
+}
