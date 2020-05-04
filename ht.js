@@ -90,6 +90,7 @@ function toggleX(elmnt){
     e.preventDefault()
 	var formData=new FormData(form);
 	formData.append('key',sheetURL.match(/d\/(.*)\//)[1]);
+	console.log(document.getElementById("name").value);
 	formData.append('studentname',document.getElementById("name").value);
 	formData.append('incorrectAttemps',incorrectAttemps);
 	formData.append('page',pageName);
