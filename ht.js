@@ -98,7 +98,7 @@ function toggleX(elmnt){
     e.preventDefault()
 	var message=document.getElementById("message");
 	message.innerHTML="You got ".concat(correct,"/",total," correct");
-	/*var formData=new FormData(form);
+	var formData=new FormData(form);
 	formData.append('key',sheetURL.match(/d\/(.*)\//)[1]);
 	console.log(document.getElementById("name").value);
 	formData.append('studentname',document.getElementById("name").value);
@@ -109,7 +109,7 @@ function toggleX(elmnt){
 	
     fetch(scriptURL, { method: 'POST', body:formData })
       .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))*/
+      .catch(error => console.error('Error!', error.message))
   })
 
 
