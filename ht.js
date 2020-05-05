@@ -34,11 +34,12 @@ function myFunction(e){
 					
 					if(ele.value==ans[n]){
 						e.disabled=true;
-						e.style.color="#cccccc";
-						console.log(e.disabled);
+						
 						ele.dataset.flag=true;
+						ele.readOnly=true;
 						correct++;
 						ele.style.backgroundColor="hsl(120, 100%, 50%)";
+						
 						break;
 					}
 					else{
@@ -55,7 +56,14 @@ function myFunction(e){
 	
   }
   
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+  document.getElementById("myNav").style.opacity="100%";
+}
 
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
   
   function cclear(element){
 	console.log(element.dataset.flag);
@@ -88,7 +96,9 @@ function toggleX(elmnt){
 //===========================================================
   form.addEventListener('submit', e => {
     e.preventDefault()
-	var formData=new FormData(form);
+	var message=document.getElementById("message");
+	message.innerHTML="You got ".concat(correct,"/",total," correct");
+	/*var formData=new FormData(form);
 	formData.append('key',sheetURL.match(/d\/(.*)\//)[1]);
 	console.log(document.getElementById("name").value);
 	formData.append('studentname',document.getElementById("name").value);
@@ -99,7 +109,7 @@ function toggleX(elmnt){
 	
     fetch(scriptURL, { method: 'POST', body:formData })
       .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
+      .catch(error => console.error('Error!', error.message))*/
   })
 
 
@@ -107,3 +117,5 @@ function toggleX(elmnt){
 //================================================
 
 $('#sheetPost').disableAutoFill();
+
+

@@ -43,7 +43,7 @@
 	</div>
 	
 	
-	
+
 	
 	<div  class="grid-container">
 
@@ -91,7 +91,7 @@
 			<!-- question object  -->
 			 <label class="question-label">5-2=</label> 
 			 <input id="question-1"  autocomplete="new-password"  class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)" onkeypress="return isNumber(event);" type="text" >
-			 <button  class="check-1" data-linked='["question-1"]' onclick="myFunction(this)" type="button"  >
+			 <button  class="check" data-linked='["question-1"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -126,7 +126,7 @@
 			<!-- question object  -->
 			 <label class="question-label">3-2=</label> 
 			 <input id="question-2" class="question-box" data-ans='["1"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button class="check-1" data-linked='["question-2"]' onclick="myFunction(this)" type="button"  >
+			 <button class="check" data-linked='["question-2"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -187,7 +187,7 @@
 			<!-- question object  -->
 			 <label class="question-label">6-3=</label> 
 			 <input id="question-3"  autocomplete="new-password"class="question-box" data-ans='["3"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button class="check-1" data-linked='["question-3"]' onclick="myFunction(this)" type="button"  >
+			 <button class="check" data-linked='["question-3"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -231,7 +231,7 @@
 			<!-- question object  -->
 			 <label class="question-label">4-2=</label> 
 			 <input   autocomplete="new-password" id="question-4" class="question-box" data-ans='["2"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button class="check-1" data-linked='["question-4"]' onclick="myFunction(this)" type="button"  >
+			 <button class="check" data-linked='["question-4"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -275,7 +275,7 @@
 			<!-- question object  -->
 			 <label class="question-label">4-3=</label> 
 			 <input id="question-5"  autocomplete="new-password" class="question-box" data-ans='["1"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button class="check-1" data-linked='["question-5"]' onclick="myFunction(this)" type="button"  >
+			 <button class="check" data-linked='["question-5"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
@@ -327,16 +327,49 @@
 			<!-- question object  -->
 			 <label class="question-label">5-5=</label> 
 			 <input id="question-6"  autocomplete="new-password" class="question-box" data-ans='["0"]' data-flag='false' maxlength="1" onfocus="cclear(this)"  onkeypress="return isNumber(event);" type="text" >
-			 <button class="check-1" data-linked='["question-6"]' onclick="myFunction(this)" type="button"  >
+			 <button class="check" data-linked='["question-6"]' onclick="myFunction(this)" type="button"  >
 				<img class="icon" src="chek.png">
 				</button>
 		</div>
-	
+		
 	
 	</div>
 	
 	<script src="ht.js"></script>
-	<input type="submit" value="Submit" class="subButton">
-	</form>
+	
+	
+	<input type="submit" value="Submit" onclick="openNav()" class="subButton">
+</form>
+	
+	<!-- submit overlay  -->
+	<div id="myNav" class="overlay2">
+	
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			
+		<div class="overlay2-content">
+			
+			<h1 >Good Job!</h1>
+			<p id="message"></p>
+			
+		</div>
+		<div class="cont">
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+					<div class="confetti"></div>
+				</div>
+	</div>
+
+
 </body>
 </html>
