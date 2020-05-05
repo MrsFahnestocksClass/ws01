@@ -96,8 +96,11 @@ function toggleX(elmnt){
 //===========================================================
   form.addEventListener('submit', e => {
     e.preventDefault()
+	
 	var message=document.getElementById("message");
 	message.innerHTML="You got ".concat(correct,"/",total," correct");
+	openNav();
+	
 	var formData=new FormData(form);
 	formData.append('key',sheetURL.match(/d\/(.*)\//)[1]);
 	console.log(document.getElementById("name").value);
