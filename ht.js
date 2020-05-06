@@ -96,23 +96,27 @@ function toggleX(elmnt){
 //===========================================================
   form.addEventListener('submit', e => {
     e.preventDefault()
-	
-	var message=document.getElementById("message");
-	message.innerHTML="You got ".concat(correct,"/",total," correct");
-	openNav();
-	
-	var formData=new FormData(form);
-	formData.append('key',sheetURL.match(/d\/(.*)\//)[1]);
-	console.log(document.getElementById("name").value);
-	formData.append('studentname',document.getElementById("name").value);
-	formData.append('incorrectAttemps',incorrectAttemps);
-	formData.append('page',pageName);
-	formData.append('number of questions',total);
-	formData.append('correct',correct);
-	
-    fetch(scriptURL, { method: 'POST', body:formData })
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
+	if(document.getElementById("name").value.replace(/^\s+|\s+$/g, '').length == 0){
+		window.alert("Make shure you entered your name");
+	}
+	else{
+		var message=document.getElementById("message");
+		message.innerHTML="You got ".concat(correct,"/",total," correct");
+		openNav();
+		
+		var formData=new FormData(form);
+		formData.append('key',sheetURL.match(/d\/(.*)\//)[1]);
+		console.log(document.getElementById("name").value);
+		formData.append('studentname',document.getElementById("name").value);
+		formData.append('incorrectAttemps',incorrectAttemps);
+		formData.append('page',pageName);
+		formData.append('number of questions',total);
+		formData.append('correct',correct);
+		
+		fetch(scriptURL, { method: 'POST', body:formData })
+		  .then(response => console.log('Success!', response))
+		  .catch(error => console.error('Error!', error.message))
+	}
   })
 
 
